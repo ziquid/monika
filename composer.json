@@ -16,10 +16,22 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/adminimal_admin_toolbar": "^1.10",
+        "drupal/adminimal_theme": "^1.5",
         "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "^8.8"
+        "drupal/core-recommended": "^8.8",
+        "drupal/entityqueue": "1.x-dev",
+        "drupal/fontyourface": "3.x-dev",
+        "vlucas/phpdotenv": "^4.1",
+        "webflo/drupal-finder": "^1.2",
+        "webmozart/path-util": "^2.3",
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
+        "drupal/devel": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -45,24 +57,10 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
-        "drupal-core-project-message": {
-            "include-keys": ["homepage", "support"],
-            "post-create-project-cmd-message": [
-                "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
-                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
-                "<bg=blue;fg=white>                                                         </>",
-                "",
-                "<bg=yellow;fg=black>Next steps</>:",
-
-                "  * Install the site: https://www.drupal.org/docs/8/install",
-                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-                "  * Get support: https://www.drupal.org/support",
-                "  * Get involved with the Drupal community:",
-                "      https://www.drupal.org/getting-involved",
-                "  * Remove the plugin that prints this message:",
-                "      composer remove drupal/core-project-message"
-            ]
+        "patches": {
+            "drupal/fontyourface": {
+                "Allow domainless fonts to be loaded": "https://www.drupal.org/files/issues/2019-11-06/disable-domain-check-8x-3092865-2.patch"
+            }
         }
     }
 }
