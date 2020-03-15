@@ -25,6 +25,7 @@
         "drupal/entityqueue": "1.x-dev",
         "drupal/fontyourface": "3.x-dev",
         "drupal/page_manager": "^4.0",
+        "drupal/recaptcha": "^2.5",
         "drupal/webform": "^5.8",
         "vlucas/phpdotenv": "^4.1",
         "webflo/drupal-finder": "^1.2",
