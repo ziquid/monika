@@ -25,6 +25,7 @@
         "drupal/entityqueue": "1.x-dev",
         "drupal/fontyourface": "3.x-dev",
         "drupal/page_manager": "^4.0",
+        "drupal/panels": "^4.6",
         "drupal/recaptcha": "^2.5",
         "drupal/telephone_validation": "^2.2",
         "drupal/webform": "^5.8",
