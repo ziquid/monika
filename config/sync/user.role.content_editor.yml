@@ -1,0 +1,9 @@
+uuid: fef86751-fe1b-420e-a9d6-216a55decf34
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content Editor'
+weight: 2
+is_admin: null
+permissions: {  }
