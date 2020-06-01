@@ -1,0 +1,26 @@
+uuid: 2a8bb8d3-d8ab-45a4-a4c0-6e9129dc7d7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: image_carousel
+label: 'Image Carousel'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: media
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: revision_created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse: false

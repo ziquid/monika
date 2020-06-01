@@ -1,0 +1,29 @@
+uuid: f62b9d2b-43a0-4ded-a49f-c7f9ffc593e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.image_carousel
+  module:
+    - media_library
+id: entity_subqueue.image_carousel.default
+targetEntityType: entity_subqueue
+bundle: image_carousel
+mode: default
+content:
+  items:
+    type: media_library_widget
+    weight: 5
+    settings:
+      media_types: {  }
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,271 @@
+uuid: 8ece2933-d7ee-4937-a06f-25bc69098588
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.image_carousel
+    - media.type.image
+  module:
+    - entityqueue
+    - media
+    - user
+    - views_slideshow
+id: home_page_carousel
+label: 'Home Page Carousel'
+module: views
+description: ''
+tag: ''
+base_table: media_field_data
+base_field: mid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'view media'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: some
+        options:
+          items_per_page: 5
+          offset: 0
+      style:
+        type: slideshow
+        options:
+          row_class: ''
+          default_row_class: true
+          slideshow_skin: default
+          slideshow_type: views_slideshow_cycle
+          views_slideshow_cycle:
+            effect: fade
+            transition_advanced: 0
+            timeout: '5000'
+            speed: '700'
+            delay: '0'
+            sync: 1
+            random: 0
+            pause: 1
+            pause_on_click: 0
+            action_advanced: 0
+            start_paused: 0
+            remember_slide: 0
+            remember_slide_days: '1'
+            pause_in_middle: 0
+            pause_when_hidden: 0
+            pause_when_hidden_type: full
+            amount_allowed_visible: ''
+            nowrap: 0
+            fixed_height: 1
+            items_per_slide: '1'
+            items_per_slide_first: 0
+            items_per_slide_first_number: '1'
+            wait_for_image_load: 1
+            wait_for_image_load_timeout: '3000'
+            cleartype: 0
+            cleartypenobg: 0
+            advanced_options_choices: '0'
+            advanced_options_entry: ''
+            advanced_options: '{}'
+          widgets:
+            top:
+              views_slideshow_slide_counter:
+                enable: false
+                weight: '1'
+                hide_on_single_slide: '0'
+              views_slideshow_controls:
+                enable: false
+                weight: '1'
+                hide_on_single_slide: '0'
+                type: views_slideshow_controls_text
+              views_slideshow_pager:
+                enable: false
+                weight: '1'
+                hide_on_single_slide: '0'
+                type: views_slideshow_pager_fields
+                views_slideshow_pager_fields:
+                  views_slideshow_pager_fields_fields:
+                    name: 0
+                  views_slideshow_pager_fields_hover: 0
+                views_slideshow_pager_bullets:
+                  views_slideshow_pager_bullets_hover: 0
+            bottom:
+              views_slideshow_slide_counter:
+                enable: true
+                weight: '1'
+                hide_on_single_slide: '0'
+              views_slideshow_controls:
+                enable: true
+                weight: '1'
+                hide_on_single_slide: '0'
+                type: views_slideshow_controls_text
+              views_slideshow_pager:
+                enable: false
+                weight: '1'
+                hide_on_single_slide: '0'
+                type: views_slideshow_pager_fields
+                views_slideshow_pager_fields:
+                  views_slideshow_pager_fields_fields:
+                    name: 0
+                  views_slideshow_pager_fields_hover: 0
+                views_slideshow_pager_bullets:
+                  views_slideshow_pager_bullets_hover: 0
+      row:
+        type: 'entity:media'
+      fields:
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          entity_type: media
+          entity_field: media
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      filters:
+        status:
+          value: '1'
+          table: media_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: media
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          value:
+            image: image
+          entity_type: media
+          entity_field: bundle
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      sorts:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: media_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: media
+          plugin_id: entity_queue_position
+      title: 'Home Page Carousel'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: media_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'Media queue'
+          required: true
+          limit_queue: image_carousel
+          entity_type: media
+          plugin_id: entity_queue
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:entityqueue.entity_queue.image_carousel'
+        - entity_field_info
+        - views_data
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 1
+    display_options:
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:entityqueue.entity_queue.image_carousel'
+        - entity_field_info
+        - views_data
