@@ -6,6 +6,6 @@ git co master
 git pull
 composer.phar install
 drush updb -y
-drush cim -y sync
+drush cim -y sync --partial
 drush cr
 drush cc views
