@@ -1,0 +1,35 @@
+uuid: e74a5f51-053a-4119-bb11-a78bb022c526
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page
+    - views.view.home_page_carousel
+  module:
+    - views
+id: home_page-block_display-0
+label: 'Home Page'
+variant: block_display
+variant_settings:
+  blocks:
+    8239f183-0e3f-4785-879e-f10c81ef9218:
+      id: 'views_block:home_page_carousel-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: 0
+      uuid: 8239f183-0e3f-4785-879e-f10c81ef9218
+      context_mapping: {  }
+  id: block_display
+  uuid: 2718ae92-9160-484a-8e5a-f8e31725c13d
+  label: null
+  weight: 0
+  page_title: 'Sensual Massage by Monika'
+page: home_page
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }
