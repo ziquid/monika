@@ -1,23 +1,18 @@
-uuid: fe7832ba-716d-46fa-9a49-b3565e9a59af
+uuid: eb521b52-abdb-48c1-8bcb-bb9867fc3ca8
 langcode: en
 status: open
-dependencies:
-  enforced:
-    module:
-      - webform
-_core:
-  default_config_hash: z-xqCZwXhZ-pXe52c0MCf7kYjLzvlLDyOusIt5u1C0g
+dependencies: {  }
 open: null
 close: null
 weight: 0
-uid: null
+uid: 3
 template: false
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: booking
+title: Booking
+description: ''
 category: ''
-elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: "contact_details:\n  '#type': label\n  '#title': 'Contact Details'\nfull_name:\n  '#type': textfield\n  '#title': 'Full Name'\n  '#title_display': invisible\n  '#placeholder': 'Full Name'\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#title_display': invisible\n  '#placeholder': Email\nmobile_number:\n  '#type': tel\n  '#title': 'Mobile Number'\n  '#title_display': invisible\n  '#placeholder': 'Mobile Number'\n  '#required': true\n  '#required_error': 'Please enter your mobile number'\n  '#international': true\n  '#international_initial_country': GB\nappointment:\n  '#type': label\n  '#title': Appointment\ndate:\n  '#type': date\n  '#title': Date\n  '#title_display': invisible\n  '#placeholder': DD/MM/YYYY\n  '#required': true\n  '#date_date_min': today\n  '#datepicker': true\n  '#date_date_format': d/m/Y\ntime:\n  '#type': webform_time\n  '#title': Time\n  '#title_display': invisible\n  '#placeholder': '00:00 AM/PM'\n  '#required': true\n  '#timepicker': true\n  '#time_format': 'g:i A'\n  '#max': '22:00:00'\n  '#step': 1800\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': invisible\n  '#placeholder': 'Message or Request'\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA"
 css: ''
 javascript: ''
 settings:
@@ -26,11 +21,11 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: true
+  page: false
   page_submit_path: ''
   page_confirm_path: ''
-  page_admin_theme: false
-  form_title: source_entity_webform
+  page_theme_name: ''
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -59,6 +54,11 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
   submission_label: ''
   submission_log: false
   submission_views: {  }
@@ -84,11 +84,17 @@ settings:
   wizard_progress_percentage: false
   wizard_progress_link: false
   wizard_progress_states: false
+  wizard_auto_forward: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
   wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -104,10 +110,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
-  confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_type: modal
+  confirmation_title: 'Thank you'
+  confirmation_message: 'Thank you for your appointment request.&nbsp; I will respond to you shortly!'
+  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -131,6 +137,7 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  results_customize: false
   token_view: false
   token_update: false
 access:
@@ -181,28 +188,31 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
+  email:
     id: email
-    label: 'Email confirmation'
-    handler_id: email_confirmation
+    label: 'Massage Appointment Request'
+    handler_id: email
     status: true
     conditions: {  }
-    weight: 1
+    weight: 0
     settings:
       states:
         - completed
-      to_mail: '[webform_submission:values:email:raw]'
+      to_mail: marjory@ziquid.com
       to_options: {  }
-      cc_mail: ''
+      cc_mail: joseph@ziquid.com
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
+      subject: _default
+      body: _default
+      excluded_elements:
+        contact_details: contact_details
+        appointment: appointment
+        captcha: captcha
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
@@ -210,47 +220,11 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
-      parameters: {  }
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
-  email_notification:
-    id: email
-    label: 'Email notification'
-    handler_id: email_notification
-    status: true
-    conditions: {  }
-    weight: 2
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
       theme_name: ''
       parameters: {  }
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
 variants: {  }
