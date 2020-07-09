@@ -5,8 +5,10 @@ dependencies:
   config:
     - page_manager.page.home_page
     - views.view.home_page_carousel
+    - webform.webform.booking
   module:
     - views
+    - webform
 id: home_page-block_display-0
 label: 'Home Page'
 variant: block_display
@@ -22,6 +24,18 @@ variant_settings:
       region: top
       weight: 0
       uuid: 8239f183-0e3f-4785-879e-f10c81ef9218
+      context_mapping: {  }
+    da43604b-b17b-4969-a434-ceb98c584c90:
+      id: webform_block
+      label: Webform
+      provider: webform
+      label_display: '0'
+      webform_id: booking
+      default_data: ''
+      redirect: false
+      region: top
+      weight: 0
+      uuid: da43604b-b17b-4969-a434-ceb98c584c90
       context_mapping: {  }
   id: block_display
   uuid: 2718ae92-9160-484a-8e5a-f8e31725c13d
