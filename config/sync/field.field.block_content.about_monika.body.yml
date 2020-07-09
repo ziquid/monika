@@ -1,0 +1,23 @@
+uuid: 7e3113e7-d416-44d9-b720-eaa1c39c9cfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_monika
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.about_monika.body
+field_name: body
+entity_type: block_content
+bundle: about_monika
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

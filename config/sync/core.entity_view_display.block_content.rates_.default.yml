@@ -1,0 +1,22 @@
+uuid: 50c40677-c4f8-437c-807e-f873342f1987
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rates_
+    - field.field.block_content.rates_.body
+  module:
+    - text
+id: block_content.rates_.default
+targetEntityType: block_content
+bundle: rates_
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

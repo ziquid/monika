@@ -1,0 +1,23 @@
+uuid: 85dbca02-2d5e-4ad5-a477-e04814ec74e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.book_now_
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.book_now_.body
+field_name: body
+entity_type: block_content
+bundle: book_now_
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary
