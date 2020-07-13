@@ -1,0 +1,25 @@
+uuid: 0514183f-2241-46b2-b588-9ef3f004446c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:rates_:4aaa6ec9-65af-4808-8ca0-5ae4ffe26468'
+  module:
+    - block_content
+  theme:
+    - adminimal_theme
+id: rates
+theme: adminimal_theme
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:4aaa6ec9-65af-4808-8ca0-5ae4ffe26468'
+settings:
+  id: 'block_content:4aaa6ec9-65af-4808-8ca0-5ae4ffe26468'
+  label: 'Rates:'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

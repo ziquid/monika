@@ -1,0 +1,22 @@
+uuid: e3b34315-e5e5-4df5-acff-ad29fc6f60d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.book_now_
+    - field.field.block_content.book_now_.body
+  module:
+    - text
+id: block_content.book_now_.default
+targetEntityType: block_content
+bundle: book_now_
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

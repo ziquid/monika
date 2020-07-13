@@ -1,0 +1,23 @@
+uuid: 4d8ecc6b-a227-4c71-a03e-fdf429a6cca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rates_
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.rates_.body
+field_name: body
+entity_type: block_content
+bundle: rates_
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary
