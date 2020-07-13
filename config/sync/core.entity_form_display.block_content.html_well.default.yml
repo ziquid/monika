@@ -1,15 +1,15 @@
-uuid: 72698892-362c-4c12-a432-e7e7bbba79e4
+uuid: 27d34b89-95ea-416c-ad41-e26b2e51f68d
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.about_monika
-    - field.field.block_content.about_monika.body
+    - block_content.type.html_well
+    - field.field.block_content.html_well.body
   module:
     - text
-id: block_content.about_monika.default
+id: block_content.html_well.default
 targetEntityType: block_content
-bundle: about_monika
+bundle: html_well
 mode: default
 content:
   body:

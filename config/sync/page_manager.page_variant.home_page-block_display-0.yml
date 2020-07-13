@@ -6,7 +6,13 @@ dependencies:
     - page_manager.page.home_page
     - views.view.home_page_carousel
     - webform.webform.booking
+  content:
+    - 'block_content:html_well:3337069d-95fb-4c79-a779-fd2816d11d38'
+    - 'block_content:html_well:9d7c90f2-5e78-4fb9-bb30-5372a0d8f6cf'
+    - 'block_content:html_well:b305bb5b-e5df-4112-aba5-93f21362e7fa'
+    - 'block_content:html_well:b3ccee1b-c5ee-46ce-bf18-44f14df8ae79'
   module:
+    - block_content
     - views
     - webform
 id: home_page-block_display-0
@@ -22,7 +28,7 @@ variant_settings:
       views_label: ''
       items_per_page: none
       region: top
-      weight: 0
+      weight: -9
       uuid: 8239f183-0e3f-4785-879e-f10c81ef9218
       context_mapping: {  }
     da43604b-b17b-4969-a434-ceb98c584c90:
@@ -34,8 +40,56 @@ variant_settings:
       default_data: ''
       redirect: false
       region: top
-      weight: 0
+      weight: -6
       uuid: da43604b-b17b-4969-a434-ceb98c584c90
+      context_mapping: {  }
+    96ed81c5-91d9-4352-8b16-80885019532a:
+      id: 'block_content:9d7c90f2-5e78-4fb9-bb30-5372a0d8f6cf'
+      label: 'Rates:'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: -8
+      uuid: 96ed81c5-91d9-4352-8b16-80885019532a
+      context_mapping: {  }
+    bc347693-d7c2-4914-ae59-987e4970e904:
+      id: 'block_content:b305bb5b-e5df-4112-aba5-93f21362e7fa'
+      label: 'Book Now!'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: -7
+      uuid: bc347693-d7c2-4914-ae59-987e4970e904
+      context_mapping: {  }
+    0f8e09ca-a273-44f6-918f-de80fc185c63:
+      id: 'block_content:b3ccee1b-c5ee-46ce-bf18-44f14df8ae79'
+      label: 'About Monika'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: -5
+      uuid: 0f8e09ca-a273-44f6-918f-de80fc185c63
+      context_mapping: {  }
+    32a17d52-b2db-4418-bab7-39f619ea57c5:
+      id: 'block_content:3337069d-95fb-4c79-a779-fd2816d11d38'
+      label: Title
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: -10
+      uuid: 32a17d52-b2db-4418-bab7-39f619ea57c5
       context_mapping: {  }
   id: block_display
   uuid: 2718ae92-9160-484a-8e5a-f8e31725c13d

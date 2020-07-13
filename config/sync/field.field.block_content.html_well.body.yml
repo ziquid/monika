@@ -1,16 +1,16 @@
-uuid: 85dbca02-2d5e-4ad5-a477-e04814ec74e5
+uuid: 4125958c-432e-41d8-96c7-4197ebbcc598
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.book_now_
+    - block_content.type.html_well
     - field.storage.block_content.body
   module:
     - text
-id: block_content.book_now_.body
+id: block_content.html_well.body
 field_name: body
 entity_type: block_content
-bundle: book_now_
+bundle: html_well
 label: Body
 description: ''
 required: false

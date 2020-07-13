@@ -1,15 +1,15 @@
-uuid: 50c40677-c4f8-437c-807e-f873342f1987
+uuid: b87911c4-a9b9-4b00-819a-afecb04c122e
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.rates_
-    - field.field.block_content.rates_.body
+    - block_content.type.html_well
+    - field.field.block_content.html_well.body
   module:
     - text
-id: block_content.rates_.default
+id: block_content.html_well.default
 targetEntityType: block_content
-bundle: rates_
+bundle: html_well
 mode: default
 content:
   body:
