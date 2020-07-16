@@ -1,0 +1,22 @@
+uuid: e3c3f7a9-3f1e-4115-9f23-0271025bcf46
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - monika_theme
+_core:
+  default_config_hash: 8by5KRsb7ZpmjHj0ms1d7xAG_xH54AWsOX6spDLJ59U
+id: monika_theme_breadcrumbs
+theme: monika_theme
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
