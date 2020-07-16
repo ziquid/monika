@@ -1,0 +1,22 @@
+uuid: bebb8847-6622-4e9d-aaed-e680f1ae7318
+langcode: en
+status: true
+dependencies:
+  theme:
+    - monika_theme
+_core:
+  default_config_hash: CyX_aDKAka2_eihevNLscCHDYrzDgIqwWzFVEFRKIww
+id: monika_theme_primary_local_tasks
+theme: monika_theme
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

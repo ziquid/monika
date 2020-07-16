@@ -1,0 +1,20 @@
+uuid: 3f71457e-b5c6-4fdf-a9c2-ec900e00df2d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - monika_theme
+_core:
+  default_config_hash: ik4PTMlBD0MWansnSMpSXq5SUlWRJ1IVVt6C7AIbQmc
+id: monika_theme_local_actions
+theme: monika_theme
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

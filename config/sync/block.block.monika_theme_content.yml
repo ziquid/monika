@@ -1,0 +1,22 @@
+uuid: 9dcef128-6425-4e90-8160-c05064c051e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - monika_theme
+_core:
+  default_config_hash: 80N66GdzEvwqi1m-_GZ-ulkk8AJG9beoXcZ4-pMVKjI
+id: monika_theme_content
+theme: monika_theme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

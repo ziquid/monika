@@ -1,0 +1,20 @@
+uuid: c07a8ccb-8d40-4335-9613-85b318c2c0f6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - monika_theme
+_core:
+  default_config_hash: Z3nlZUh2mSJP3apMrJWt-duS-aLyP79rcfu_0wpPmDs
+id: monika_theme_page_title
+theme: monika_theme
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
