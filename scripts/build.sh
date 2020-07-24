@@ -2,13 +2,19 @@
 # build monika on OVH3 or local
 
 set -xe
-git co master
-git pull
+git fetch
+
+if [ "$1" != "" ]; then
+  echo checking out branch $1...
+  git co $1
+  git pull
+fi
+
 composer.phar install
+drush cr || :
 drush updb -y
 drush cr || :
 [ $(uname) == Linux ] && drush cim -y sync || drush cim -y sync --partial
 drush cr
 drush cc views
-# [ $(uname) == Linux ] && drush pmu -y stage_file_proxy
-# [ $(uname) == Linux ] && $(dirname "$0")/db-dump.sh
+$(dirname "$0")/db-dump.sh
