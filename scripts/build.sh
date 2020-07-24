@@ -2,6 +2,10 @@
 # build monika on OVH3 or local
 
 set -xe
+
+# Linux/non-apache?  sudo to apache
+[ $(uname) == Linux ] && [ $(whoami) == apache ] && exec sudo su -l apache -s /bin/bash "$0" "$@"
+
 cd $(dirname "$0")/..
 git fetch
 
@@ -18,4 +22,4 @@ drush cr || :
 [ $(uname) == Linux ] && drush cim -y sync || drush cim -y sync --partial
 drush cr
 drush cc views
-$(dirname "$0")/db-dump.sh
+scripts/db-dump.sh
