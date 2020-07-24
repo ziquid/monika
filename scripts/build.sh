@@ -6,7 +6,7 @@ git fetch
 
 if [ "$1" != "" ]; then
   echo checking out branch $1...
-  git co $BRANCH
+  git co $1
   git pull
 fi
 
