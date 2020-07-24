@@ -20,6 +20,7 @@
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_admin_toolbar": "^1.10",
         "drupal/adminimal_theme": "^1.5",
+        "drupal/block_class": "^1.2",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/entityqueue": "1.x-dev",
