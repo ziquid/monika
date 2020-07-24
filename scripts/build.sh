@@ -2,6 +2,7 @@
 # build monika on OVH3 or local
 
 set -xe
+cd $(dirname "$0")/..
 git fetch
 
 if [ "$1" != "" ]; then
