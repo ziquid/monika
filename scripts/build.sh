@@ -2,8 +2,14 @@
 # build monika on OVH3 or local
 
 set -xe
-git co master
-git pull
+git fetch
+
+if [ "$1" != "" ]; then
+  echo checking out branch $1...
+  git co $BRANCH
+  git pull
+fi
+
 composer.phar install
 drush cr || :
 drush updb -y
