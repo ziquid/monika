@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f9068f8535a694517dda4ad33105563",
+    "content-hash": "727c414a15a2b33d01dedc9830175e85",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,24 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "bower-asset/jquery-cycle2",
+            "version": "2.1.6",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:malsup/cycle2.git",
+                "reference": "4b48add7aa0d41d9c735d13f8dc72033f7866e37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/malsup/cycle2/zipball/4b48add7aa0d41d9c735d13f8dc72033f7866e37",
+                "reference": "4b48add7aa0d41d9c735d13f8dc72033f7866e37"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -3040,6 +3058,57 @@
                 "issues": "https://www.drupal.org/project/issues/views_slideshow",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
+        },
+        {
+            "name": "drupal/views_slideshow_cycle2",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_slideshow_cycle2.git",
+                "reference": "69bd57f02f2ceb39ee258390e08bd9b931e062a3"
+            },
+            "require": {
+                "bower-asset/jquery-cycle2": "^2.1",
+                "drupal/core": "~8.0",
+                "drupal/views_slideshow": "^4.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1525254484",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Karel Majzlik",
+                    "homepage": "https://www.drupal.org/user/122194",
+                    "email": "majzlik@cngroup.dk"
+                }
+            ],
+            "description": "Cycle plugin for Views Slideshow.",
+            "homepage": "https://www.drupal.org/project/views_slideshow",
+            "support": {
+                "source": "https://cgit.drupalcode.org/views_slideshow_cycle2",
+                "issues": "https://www.drupal.org/project/issues/views_slideshow_cycle2"
+            },
+            "time": "2018-05-02T09:45:55+00:00"
         },
         {
             "name": "drupal/webform",
@@ -7670,7 +7739,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/entityqueue": 20,
-        "drupal/fontyourface": 20
+        "drupal/fontyourface": 20,
+        "drupal/views_slideshow_cycle2": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
