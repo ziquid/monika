@@ -60,7 +60,7 @@ display:
           row_class: ''
           default_row_class: true
           slideshow_skin: default
-          slideshow_type: views_slideshow_cycle
+          slideshow_type: views_slideshow_cycle2
           views_slideshow_cycle:
             effect: fade
             transition_advanced: 0
@@ -91,6 +91,30 @@ display:
             advanced_options_choices: '0'
             advanced_options_entry: ''
             advanced_options: '{}'
+          views_slideshow_cycle2:
+            main:
+              rows_per_frame: '1'
+              paused: 0
+              random: 0
+              reverse: 0
+              swipe: 0
+              swipe-fx: none
+            transition:
+              fx: scrollHorz
+              advanced: 0
+              timeout: '4000'
+              speed: '500'
+              manual-speed: ''
+            pager:
+              type: default
+              pager: ''
+              pager-template: '<span>&bull;</span>'
+              pager-event: click
+            controls:
+              type: default
+              use_text: 0
+              prev_text: Previous
+              next_text: Next
           widgets:
             top:
               views_slideshow_slide_counter:
