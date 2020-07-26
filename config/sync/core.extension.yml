@@ -36,6 +36,8 @@ module:
   media: 0
   media_library: 0
   menu_ui: 0
+  metatag: 0
+  metatag_mobile: 0
   node: 0
   options: 0
   page_cache: 0
@@ -53,6 +55,7 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   update: 0
   user: 0

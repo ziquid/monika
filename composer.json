@@ -29,6 +29,7 @@
         "drupal/core-recommended": "^8.8",
         "drupal/entityqueue": "1.x-dev",
         "drupal/fontyourface": "3.x-dev",
+        "drupal/metatag": "^1.13",
         "drupal/page_manager": "^4.0",
         "drupal/panels": "^4.6",
         "drupal/recaptcha": "^2.5",
