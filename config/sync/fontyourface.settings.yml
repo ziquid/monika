@@ -1,7 +1,9 @@
 enabled_fonts:
-  19: 'https://typekit.com/fonts/p22-pouty-pro#n4'
-  39: 'https://typekit.com/fonts/wreath#n4'
-  40: 'https://typekit.com/fonts/wreath#n7'
+  41: 'https://typekit.com/fonts/tangerine#n7'
+  42: 'https://typekit.com/fonts/tangerine#n4'
+  62: 'https://typekit.com/fonts/p22-pouty-pro#n4'
+  63: 'https://typekit.com/fonts/wreath#n4'
+  64: 'https://typekit.com/fonts/wreath#n7'
 load_all_enabled_fonts: 1
 load_on_themes:
   monika_theme: monika_theme
