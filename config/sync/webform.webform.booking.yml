@@ -204,11 +204,11 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: _default
+      from_mail: monicasworkshop@gmail.com
       from_options: {  }
-      from_name: _default
+      from_name: 'Sensual Massage by Monika'
       subject: _default
-      body: _default
+      body: '[webform_submission:values]'
       excluded_elements:
         contact_details: contact_details
         appointment: appointment
