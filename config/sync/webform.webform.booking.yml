@@ -208,7 +208,7 @@ handlers:
       from_options: {  }
       from_name: 'Sensual Massage by Monika'
       subject: _default
-      body: _default
+      body: '[webform_submission:values]'
       excluded_elements:
         contact_details: contact_details
         appointment: appointment
