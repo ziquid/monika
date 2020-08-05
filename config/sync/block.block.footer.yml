@@ -1,0 +1,25 @@
+uuid: 0c9a1638-f311-42ce-97f4-286b6935b56d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:html_well:20e8fc2b-e704-4ea1-83aa-5dec628fb146'
+  module:
+    - block_content
+  theme:
+    - monika_theme
+id: footer
+theme: monika_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:20e8fc2b-e704-4ea1-83aa-5dec628fb146'
+settings:
+  id: 'block_content:20e8fc2b-e704-4ea1-83aa-5dec628fb146'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
