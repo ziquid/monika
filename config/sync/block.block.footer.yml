@@ -1,9 +1,9 @@
-uuid: 0c9a1638-f311-42ce-97f4-286b6935b56d
+uuid: b46a10e7-f9a0-47d2-a60b-2aad14b390c0
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:html_well:20e8fc2b-e704-4ea1-83aa-5dec628fb146'
+    - 'block_content:html_well:d551d41c-fd9d-44a7-94cd-655460e0db1f'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: monika_theme
 region: footer
 weight: 0
 provider: null
-plugin: 'block_content:20e8fc2b-e704-4ea1-83aa-5dec628fb146'
+plugin: 'block_content:d551d41c-fd9d-44a7-94cd-655460e0db1f'
 settings:
-  id: 'block_content:20e8fc2b-e704-4ea1-83aa-5dec628fb146'
+  id: 'block_content:d551d41c-fd9d-44a7-94cd-655460e0db1f'
   label: Footer
   provider: block_content
   label_display: '0'
